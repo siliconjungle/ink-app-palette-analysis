@@ -1,0 +1,48 @@
+{
+  "dawnbringer": {
+    "repository": "https://github.com/jbrandwood/grafx2",
+    "commit": "10476e44687110e35615ecff7bd685144dc574df",
+    "author": "Richard \u201cDawnBringer\u201d Fhager",
+    "scriptVersion": "Analyze Palette 2.21 / DBToolbox 1.4",
+    "files": {
+      "web/vendor/dawn/ReadMe.txt": "751a41e1060478984e16468284cc34478561763d95557122eb58ba38476b4168",
+      "web/vendor/dawn/ffonts/font_mini_3x4.lua": "af689501008211bbddb90351ccb640d40b2b0a65b82144aa5a7046d667cf2bfb",
+      "web/vendor/dawn/libs/dawnbringer_lib.lua": "cdd5ceea9737b2fb12c753471cb680f026c2c97c87ce680309f152ee68956c30",
+      "web/vendor/dawn/libs/db_text.lua": "23eb36f32e473aa2384bac1c57a65cb0cd053f1260fcd05620925fd6f96c2e16",
+      "web/vendor/dawn/scripts/pic_db_AnalyzePalette18.lua": "b89e27944ad309df24476a4352e47b152fed2ff558e2652d8831c2500fcaf334"
+    }
+  },
+  "wasmoon": {
+    "package": "wasmoon",
+    "version": "1.16.0",
+    "tarball": "https://registry.npmjs.org/wasmoon/-/wasmoon-1.16.0.tgz",
+    "tarballSha256": "7a07cb6d39af10911fabd50740833477b18b47b6f03148f15218edf474c8af56",
+    "license": "MIT",
+    "files": {
+      "web/vendor/wasmoon/LICENSE": "9ed9226c0138819a0859cf3c55a3414b4a186a17a4eaf4b5a51ceed7937615ac",
+      "web/vendor/wasmoon/glue.wasm": "95f3f19ddb740125883bc41d5ec670cd0828e7b58c8bdad385323cbff497b55c",
+      "web/vendor/wasmoon/index.js": "dc2dcf019449008bb224370052473dc760db28b3ba14fc604e1ca3e8646af35d",
+      "web/vendor/wasmoon/package.json": "dbf8353f77358bc12169b7bb7301e1978d5b503e002ee927229a8993672818fc"
+    }
+  },
+  "sdk": {
+    "commit": "2149e2b36680fb653214e8af195a32e634b272cf",
+    "files": [
+      "src/browser.js",
+      "src/gestures.js",
+      "src/desktop-keys.js",
+      "src/live-query.js",
+      "src/virtual.js",
+      "styles/tokens.css",
+      "styles/font.css",
+      "styles/fonts/inter-latin-wght-normal.woff2",
+      "styles/fonts/OFL.txt"
+    ]
+  },
+  "compatibility": {
+    "originalLuaSourceModified": false,
+    "host": "web/host.lua",
+    "indexedPadding": "Repeat the first input colour; no new colours are added.",
+    "legacyArrangement": "Rearranged V2.21 charts plus six polar fields rendered by the original function; not a pixel-identical reproduction of the older V1 raster."
+  }
+}

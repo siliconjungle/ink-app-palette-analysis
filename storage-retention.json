@@ -1,0 +1,23 @@
+{
+  "keep": {
+    "commands.mjs": "Public source, tests, required assets or licenses.",
+    "LICENSE": "Public source, tests, required assets or licenses.",
+    "web": "Public source, tests, required assets or licenses.",
+    "sdk-interop-source.json": "Public source, tests, required assets or licenses.",
+    "tests": "Public source, tests, required assets or licenses.",
+    "ink-app.json": "Public source, tests, required assets or licenses.",
+    "README.md": "Public source, tests, required assets or licenses.",
+    ".gitignore": "Public source, tests, required assets or licenses.",
+    "package-lock.json": "Public source, tests, required assets or licenses.",
+    "package.json": "Public source, tests, required assets or licenses.",
+    "scripts": "Public source, tests, required assets or licenses.",
+    "source-provenance.json": "Public source, tests, required assets or licenses.",
+    "dev.mjs": "Public source, tests, required assets or licenses.",
+    ".gitleaks.toml": "Secret scanner configuration with narrowly scoped source-checksum exceptions."
+  },
+  "safe_to_remove": {
+    "node_modules": "Completed validation output; source, dependency locks and selected test/build receipts are retained.",
+    "dist": "Completed validation output; source, dependency locks and selected test/build receipts are retained.",
+    ".local": "Completed validation output; source, dependency locks and selected test/build receipts are retained."
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "slug": "palette-analysis",
+  "title": "Palette Analysis",
+  "repository": "https://github.com/siliconjungle/ink-app-palette-analysis",
+  "directory": "dist",
+  "entry": "index.html",
+  "backend": {
+    "entry": "server.mjs",
+    "idleSafe": true
+  },
+  "desktop": {
+    "entry": "palette-analysis",
+    "icon": {
+      "svg": "web/icon.svg"
+    },
+    "window": {
+      "width": 1160,
+      "height": 800
+    },
+    "fileTypes": [
+      "image/*",
+      ".png",
+      ".jpg",
+      ".jpeg",
+      ".webp",
+      ".gif",
+      ".bmp",
+      "palette-analysis"
+    ],
+    "dropTypes": [
+      "image/*"
+    ]
+  },
+  "capabilities": [
+    "world.read",
+    "world.write",
+    "desktop.open"
+  ],
+  "commands": [
+    {
+      "id": "analyse-file",
+      "title": "Analyse selected image",
+      "description": "Analyse an Ink image without opening the picker.",
+      "inputs": [
+        {
+          "name": "file",
+          "label": "Image",
+          "type": "file",
+          "required": true,
+          "accepts": [
+            "image/*"
+          ]
+        }
+      ],
+      "handler": {
+        "type": "open"
+      }
+    },
+    {
+      "id": "analyse",
+      "title": "Analyse an image…",
+      "description": "Choose an Ink image to analyse.",
+      "inputs": [],
+      "handler": {
+        "type": "open"
+      }
+    },
+    {
+      "id": "saved",
+      "title": "Show saved analyses",
+      "description": "Show saved analyses.",
+      "inputs": [],
+      "handler": {
+        "type": "backend",
+        "path": "/analyses",
+        "method": "GET"
+      },
+      "result": {
+        "items": "analyses",
+        "title": "title",
+        "subtitle": "createdAt"
+      },
+      "effect": "read",
+      "idempotent": true
+    },
+    {
+      "id": "settings",
+      "title": "Analysis settings",
+      "description": "Choose palette analysis options.",
+      "inputs": [],
+      "handler": {
+        "type": "open"
+      }
+    },
+    {
+      "id": "analyse-png",
+      "title": "Analyse a PNG palette",
+      "description": "Create a saved DawnBringer report from a non-interlaced 8-bit PNG, in the background.",
+      "effect": "write",
+      "idempotent": true,
+      "inputs": [
+        {
+          "name": "file",
+          "label": "Source image",
+          "type": "file",
+          "required": true,
+          "accepts": [
+            "image/png"
+          ]
+        },
+        {
+          "name": "colors",
+          "label": "Maximum colours",
+          "type": "choice",
+          "required": false,
+          "default": "32",
+          "options": [
+            "16",
+            "32",
+            "64"
+          ]
+        }
+      ],
+      "handler": {
+        "type": "backend",
+        "path": "/workflow/analyse",
+        "method": "POST"
+      },
+      "outputs": [
+        {
+          "label": "Analysis record",
+          "path": "analysis.id",
+          "type": "text"
+        },
+        {
+          "label": "Report image",
+          "path": "reportId",
+          "type": "file"
+        },
+        {
+          "label": "Source image",
+          "path": "sourceId",
+          "type": "file"
+        },
+        {
+          "label": "RGB palette",
+          "path": "analysis.palette",
+          "type": "json"
+        }
+      ],
+      "result": {
+        "detail": "analysis"
+      }
+    },
+    {
+      "id": "palette-css",
+      "title": "Export palette as CSS",
+      "description": "Save a linked CSS file with one custom property for each palette colour.",
+      "effect": "write",
+      "idempotent": true,
+      "inputs": [
+        {
+          "name": "analysis",
+          "label": "Analysis record",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "handler": {
+        "type": "backend",
+        "path": "/workflow/css",
+        "method": "POST"
+      },
+      "outputs": [
+        {
+          "label": "CSS file",
+          "path": "fileId",
+          "type": "file"
+        },
+        {
+          "label": "Analysis record",
+          "path": "analysisId",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "commandsClient": "commands.mjs"
+}

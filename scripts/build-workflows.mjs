@@ -1,0 +1,7 @@
+import{readFile,writeFile,mkdir,cp}from'node:fs/promises';import{resolve}from'node:path';import{pathToFileURL}from'node:url';import{SOURCE_PATHS}from'../web/runner.mjs';
+const {build}=await import(process.env.INK_ESBUILD_MODULE?pathToFileURL(resolve(process.env.INK_ESBUILD_MODULE)).href:'esbuild');
+await mkdir('.local',{recursive:true});await mkdir('dist',{recursive:true});await cp('web','dist',{recursive:true});
+const sources=await Promise.all(SOURCE_PATHS.map(p=>readFile('web/'+p,'utf8'))),wasmURI='data:application/octet-stream;base64,'+(await readFile('web/vendor/wasmoon/glue.wasm')).toString('base64');
+await writeFile('.local/workflow-entry.mjs',"import{createService}from '../web/server.mjs';import{createHeadless}from '../web/headless.mjs';import{LuaFactory}from '../web/vendor/wasmoon/index.js';export const fetch=createService({headless:createHeadless({LuaFactory,wasmURI:"+JSON.stringify(wasmURI)+",sources:"+JSON.stringify(sources)+"})});\n");
+await build({entryPoints:['.local/workflow-entry.mjs'],outfile:'dist/server.mjs',bundle:true,format:'esm',platform:'node',target:'node24',banner:{js:"import{createRequire as __inkRequire}from'node:module';import{fileURLToPath as __inkFile}from'node:url';import{dirname as __inkDir}from'node:path';const require=__inkRequire(import.meta.url),__filename=__inkFile(import.meta.url),__dirname=__inkDir(__filename);"}});
+console.log('Bundled the existing DawnBringer/Wasmoon renderer for background PNG analysis.');
