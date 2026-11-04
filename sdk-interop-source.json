@@ -4,9 +4,16 @@
     "web/sdk/browser.js": "743a9b6d497639865bf8276c544fc2aba2a1ba267cdb16f982a56ae9a2cb8ad1",
     "web/sdk/context-menu.js": "e2957827be1dc5bfe678a1bad0f540566738aef796ff2ffaf33fb54ce2761f3e",
     "web/sdk/gestures.js": "8c5ca686dc0917069a41233cf3dd3b8a2130ea0cbeb0a8b971372609e26b1c15",
-    "web/sdk/desktop-keys.js": "aacb9ade0a6eb7ecb9382b25d6bf60850967ac91f077418d4f556b4d39858360",
+    "web/sdk/desktop-keys.js": "2db46e6b8df75d3cfb634ff2ae47eb343a3995648200b1afa00f4db4b657a0e7",
     "web/sdk/live-query.js": "bff9ae3322c41de933ae6e466b3189909aaf4e455a82b4056f03e5c9ab16c88a",
     "web/sdk/app-api.js": "7c8e0c04fe8179878802734fadd3f5128170cfc1d3104ef6ecab9b290631ecfb",
     "web/sdk/interop-bridge.js": "fcb0e0caf4957d2c0093ae390912b407698d39dd5aff4d4236b2a49aa86f9594"
+  },
+  "quickLookUpdate": {
+    "repository": "https://github.com/siliconjungle/ink-os-platform",
+    "commit": "46ce0e65344ca1d4a825ce9b7440268844c4dd4d",
+    "files": [
+      "web/sdk/desktop-keys.js"
+    ]
   }
 }

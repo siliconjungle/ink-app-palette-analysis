@@ -29,7 +29,19 @@
     ],
     "dropTypes": [
       "image/*"
-    ]
+    ],
+    "preview": {
+      "fileTypes": [
+        "image/*",
+        ".png",
+        ".jpg",
+        ".jpeg",
+        ".webp",
+        ".gif",
+        ".bmp",
+        "palette-analysis"
+      ]
+    }
   },
   "capabilities": [
     "world.read",
