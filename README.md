@@ -33,3 +33,7 @@ DawnBringer scripts and colour calculations are by Richard “DawnBringer” Fha
 ## License
 
 MIT for app code. Bundled third-party components retain their own licenses and notices.
+
+## Quick preview
+
+Shows the source image or saved analysis report without running a new analysis. Ink OS can select this reader through `desktop.preview.fileTypes`, independently of Open with. Space opens the temporary preview from a selection; Escape or Space dismisses it, and arrow keys browse the supplied item order.

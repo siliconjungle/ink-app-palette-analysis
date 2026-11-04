@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/siliconjungle/ink-os-platform",
+  "commit": "9760aab7159ba7bbaf6a347c50db59b90a9c7460",
+  "sourceFiles": {
+    "sdk/src/browser.js": "554e42f96c1d21769dc6651cb91ad9e97c2f644ac0b3ad13988ec237300c8af4",
+    "sdk/src/desktop-keys.js": "415926ac37fd9f3e193061d1f310d34113141941cf6f0bfd3ff6ce51152c79c0",
+    "sdk/src/file-preview.js": "89666747a0ae96d2266b08b569e736c4ed1c808753fd590cb5b474e171133685"
+  },
+  "files": {
+    "web/quick-look.mjs": "7ca8a8c57a1999dc64c55bca8a8d120fd123ac04d878d6f8174f837458978e4e"
+  }
+}
