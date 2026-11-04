@@ -1,13 +1,13 @@
 {
   "repository": "https://github.com/siliconjungle/ink-os-platform",
-  "commit": "46ce0e65344ca1d4a825ce9b7440268844c4dd4d",
+  "commit": "8b325465416b972c1d968d8b74102732a25578d8",
   "sourceFiles": {
     "sdk/src/browser.js": "bb117a7f589dde90dff860de11a24a9749f3b268ef8cfb3fe52cb639335c347b",
-    "sdk/src/desktop-keys.js": "2db46e6b8df75d3cfb634ff2ae47eb343a3995648200b1afa00f4db4b657a0e7",
+    "sdk/src/desktop-keys.js": "415926ac37fd9f3e193061d1f310d34113141941cf6f0bfd3ff6ce51152c79c0",
     "sdk/src/file-preview.js": "89666747a0ae96d2266b08b569e736c4ed1c808753fd590cb5b474e171133685"
   },
   "files": {
-    "web/quick-look.mjs": "ecd705ab31e808b4ec347db78a46245fbec4eb2dc7107f1c478a119cf3ff8560",
-    "web/sdk/desktop-keys.js": "2db46e6b8df75d3cfb634ff2ae47eb343a3995648200b1afa00f4db4b657a0e7"
+    "web/quick-look.mjs": "3e03bd17c8af7a0ca852364199805a222ec95766620dccf069c1818e9658a528",
+    "web/sdk/desktop-keys.js": "415926ac37fd9f3e193061d1f310d34113141941cf6f0bfd3ff6ce51152c79c0"
   }
 }
